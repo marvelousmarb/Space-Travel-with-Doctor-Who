@@ -1,0 +1,254 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 16 21:55:45 2018
+
+@author: Melis
+"""
+
+"""
+     DocString:
+        
+     A) Introduction:
+    This game is based on the tv series Doctor Who. 
+    It consists of three stages and also has defined functions 
+    for start, win, and lose. This game is the final stage of the last
+    ever Rally of the 12 Galaxies. Winner will be win  3.2 trillion krin. 
+    The final challenge is to cross the terrain, survive
+    the planet make your way to the other side of the mountains and the 
+    first one to get to the site marked as the Ghost Monument will be 
+    crowned the winner and transported off this planet. The loser will not.
+    Biggest-ever prize, biggest-ever risk. Do not travel at night, 
+    do not touch to the water. Stage must be completed before one full solar
+    rotation.
+    
+    
+    Round 1: Decide whether or not to pass the water.
+    Round 2: Fixing the solar panels.
+    Round 3: Defeat sineper guard.
+    Round 4: Underground tunnels.
+    
+    NO BUGS 
+    
+"""
+print("\nHello and welcome once again to the Space travel.\n")
+
+print("\nWhat is your name rallyer?\n")
+
+rallyer_name = input('Input rallyer name: \n')
+
+print(f"\nWelcome {rallyer_name}!!!\n")
+input('<Press any key to continue>\n')
+
+
+from sys import exit
+import random
+
+def start():
+    print("""
+          As you start on your journey, you will see water area. Transport 
+          provided by the water. To pass the water you need to fix the 
+          tri-solar engineering panels.
+          """)
+    input("<Press enter to continue>\n")
+    starting_path()
+    
+    
+    
+def starting_path():
+    print("""
+    As the rally player , what would you like to do?
+    1) Fix the solar panels.
+    2) Wait here until eaten by alliens.
+    3) Passing water by swimming.
+    """)
+    
+    choice = input(">  \n")
+    
+    if "1" in choice or "fix" in choice or "fix solar panel" in choice:
+        print("\nYou fixed the tri-solar engineering panels!\n")
+        input("<Press enter to continue>\n")
+        fix_solar_panel ()
+        
+    elif "2" in choice or "wait" in choice or "wait here" in choice:
+        print("""\nNow that you're waited, what would you like to do?""")
+        input("<Press enter to continue>\n")
+        starting_path()
+    
+    elif "3" in choice or "passing" in choice:
+        print("\nWell water was poisened! You dead bye!")
+        input("<Press enter to continue>\n")
+        
+        print(""" __     __                         _  _  _                                                _            _   __                                                            
+ \ \   / /                        (_)| || |                                              (_)          (_) / _|                                                           
+  \ \_/ /___   _   _    __      __ _ | || |    _ __    ___ __   __ ___  _ __   __      __ _  _ __      _ | |_     _   _   ___   _   _     _ __    ___ __   __ ___  _ __  
+   \   // _ \ | | | |   \ \ /\ / /| || || |   | '_ \  / _ \\ \ / // _ \| '__|  \ \ /\ / /| || '_ \    | ||  _|   | | | | / _ \ | | | |   | '_ \  / _ \\ \ / // _ \| '__| 
+    | || (_) || |_| |    \ V  V / | || || |   | | | ||  __/ \ V /|  __/| |      \ V  V / | || | | |   | || |     | |_| || (_) || |_| |   | | | ||  __/ \ V /|  __/| |    
+   _|_| \___/  \__,_|  _  \_/\_/  |_||_||_|   |_| |_| \___|  \_/  \___||_|       \_/\_/  |_||_| |_|   |_||_|      \__, | \___/  \__,_|   |_| |_| \___|  \_/  \___||_|    
+  | |                 (_)                                                                                          __/ |                                                 
+  | |__    ___   __ _  _  _ __                                                                                    |___/                                                  
+  | '_ \  / _ \ / _` || || '_ \                                                                                                                                          
+  | |_) ||  __/| (_| || || | | | _                                                                                                                                       
+  |_.__/  \___| \__, ||_||_| |_|(_)                                                                                                                                      
+                 __/ |                                                                                                                                                   
+                |___/      
+        """)
+        fail()
+        
+        
+        
+        
+    else: 
+        print("Invalid command. Please try again.")
+        input("<Press enter to continue>\n")
+        starting_path()
+        
+def fix_solar_panel():
+     print("""
+As you fixed the solar panels, you will arrive to the first ruin in the desert
+in allien planet Dr. Who says:
+    
+                "Many robot guards appeared in the ruin, they are not fully 
+                active, you all need to do slowly unthreateningly back out of 
+                here and says:
+                    
+                    "RUN. Other person shoot the robo guard, they have been
+                    activate themselves move fast and do not go straight 
+                    because they will predict your path"
+                    
+           """)
+       
+     input("<Press enter to continue>\n")
+     sniper_guards()  
+         
+     
+     
+def sniper_guards():
+    print("""
+You arrived to ruins you know that you need to deactive robo guards. They will 
+try to challenge you.
+""")
+    print("How to deactivate robo guards?")
+    print("1) Attack with robo gun")
+    print("2) Think faster!")
+
+    sniper_guards = input("> ")
+    
+    if '1' in sniper_guards or 'attack' in sniper_guards or 'shoot' in sniper_guards:
+        print("\nYou attack them with their own robo gun and deactivate them")
+        print("Robo guards yells: exterminate!")
+        input("<Press enter to continue>\n")
+        tunel_map()
+    
+            
+    elif '2' in sniper_guards or 'thinkfaster' in sniper_guards:
+        print('You end up using electro magnetic pulse')
+        print('That was impressive, brains beat bullets')
+        tunel_map()
+        
+
+def tunel_map():
+    print("""
+It's amazing what you can learn from a sniper bot, like where their control 
+commands emanate from. Also, maps!
+          """)
+    input("<Press enter to continue>\n")
+    underground_tunells()
+    
+    
+    
+def underground_tunells():
+    print("""
+    Since you deactivate sniper bot, you have the route mappy. These tunnels
+    run under half of the planet. Think of the technology the civilisation 
+    required to build all that, Ask yourself "Where are they? 
+     """)
+    
+    print("""
+    There are scorch marks all over the walls.
+    You find big locked door, you need to open it.
+    """)
+    input("<Press enter to open the door>\n")
+
+   
+    print("""
+        There are inscriptions on the floor left by the people who worked here. 
+        "We are the scientist abducted, tortured and made to work while our 
+        families are held hostage. We're forced to find new ways of destruction
+        poisons, weapons, creatures, we gave them our minds and they made us 
+        the creators of death. This planet has been left scorched
+        and barren from our work. The atmosphere and water are toxic. Killing 
+        machines and creatures inhabit every corner. We had no choice to obey 
+        the STENZA. You find the control room, there are a lot of buttons.
+        You need to find which button is the way to surface. 
+        """)
+
+#from numpy import random
+
+
+   
+    color_lst = ['yellow', 'green']
+    
+    color_choice = random.choice(color_lst)
+    guesses = 2
+    
+    
+    
+    #Looping each element in list
+    while guesses > 0:
+        print("""\n Which one of the buttons is the way to surface?
+              yellow
+              green
+              
+              """)
+        
+        choice = str(input("> "))
+        
+        choice  = choice.lower()
+    
+        
+        if choice == color_choice:
+            print("\nYou win!")
+            print(""" __          __ _                _                    _                         _             _             _   __             __      _  _               
+ \ \        / /(_)              (_)                  (_)                       | |           | |           | | / _|           / _|    (_)| |              
+  \ \  /\  / /  _  _ __   _ __   _  _ __    __ _      _  ___       ___   _ __  | | _   _     | |__    __ _ | || |_      ___  | |_      _ | |_             
+   \ \/  \/ /  | || '_ \ | '_ \ | || '_ \  / _` |    | |/ __|     / _ \ | '_ \ | || | | |    | '_ \  / _` || ||  _|    / _ \ |  _|    | || __|            
+    \  /\  /   | || | | || | | || || | | || (_| |    | |\__ \    | (_) || | | || || |_| |    | | | || (_| || || |     | (_) || |      | || |_  _          
+     \/  \/    |_||_| |_||_| |_||_||_| |_| \__, |    |_||___/     \___/ |_| |_||_| \__, |    |_| |_| \__,_||_||_|      \___/ |_|      |_| \__|(_)         
+                                            __/ |                                   __/ |                                                                 
+                                           |___/                                   |___/                                                                  
+  _    _                _                    __                   _          _    _                      _    _                     _             _   __  
+ | |  | |              (_)                  / _|                 (_)        | |  | |                    | |  | |                   | |           | | / _| 
+ | |__| |  __ _ __   __ _  _ __    __ _    | |_  _   _  _ __      _  ___    | |_ | |__    ___      ___  | |_ | |__    ___  _ __    | |__    __ _ | || |_  
+ |  __  | / _` |\ \ / /| || '_ \  / _` |   |  _|| | | || '_ \    | |/ __|   | __|| '_ \  / _ \    / _ \ | __|| '_ \  / _ \| '__|   | '_ \  / _` || ||  _| 
+ | |  | || (_| | \ V / | || | | || (_| |   | |  | |_| || | | |   | |\__ \   | |_ | | | ||  __/   | (_) || |_ | | | ||  __/| |      | | | || (_| || || | _ 
+ |_|  |_| \__,_|  \_/  |_||_| |_| \__, |   |_|   \__,_||_| |_|   |_||___/    \__||_| |_| \___|    \___/  \__||_| |_| \___||_|      |_| |_| \__,_||_||_|(_)
+                                   __/ |                                                                                                                  
+                                  |___/                                                                                                                   
+                                                      
+                                  
+                                  
+            """                       )
+            break
+        
+        elif choice != color_choice:
+            print("\nThat's incorrect, please guees again.")
+            guesses -= 1
+            
+            if guesses == 0:
+                print(f"\nYou are out of guesses. The color was {color_choice}.")
+                
+        else:
+            print("\nSomething went wrong.")
+                   
+
+
+def fail():
+    print(f"""
+           Oh, sorry to say that {rallyer_name}, looks like you lost the game
+        """)
+    input("<Press enter to continue>\n")
+    exit(0)
+        
+    
+start()   
